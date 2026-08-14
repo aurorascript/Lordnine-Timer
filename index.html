@@ -4,12 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lord Nine Boss Timer</title>
-  <meta name="description" content="Lord Nine boss timer — mark dead, track respawns" />
   <style>
     :root {
       --bg: #0b0e14;
       --panel: #141a24;
-      --panel2: #1c2433;
       --text: #eaf0ff;
       --muted: #93a0bb;
       --accent: #7aa2ff;
@@ -17,7 +15,6 @@
       --warn: #ffcc66;
       --bad: #ff6b6b;
       --border: #2a354b;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
     }
     * { box-sizing: border-box; }
     body {
@@ -27,13 +24,23 @@
       min-height: 100vh;
       background:
         radial-gradient(1000px 500px at 15% -10%, #1a2744 0%, transparent 50%),
-        radial-gradient(800px 400px at 90% 0%, #1a1830 0%, transparent 45%),
         var(--bg);
     }
-    .wrap { max-width: 920px; margin: 0 auto; padding: 24px 16px 56px; }
-    header {
-      display: flex; flex-wrap: wrap; gap: 12px;
-      align-items: flex-start; justify-content: space-between;
-      margin-bottom: 18px;
+    .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { margin: 0 0 6px; font-size: 1.5rem; }
+    .sub { color: var(--muted); font-size: 0.92rem; margin-bottom: 18px; }
+    .tabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+    .tab {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
     }
-    h1 { margin: 0; font-size: 1.55rem; letter-spacing: .2px;*
+    .tab.active { border-color: var(--accent); color: var(--accent); }
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom:*
